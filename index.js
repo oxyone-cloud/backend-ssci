@@ -7,9 +7,18 @@ const datastore = new Datastore();
 
 app.use(bodyParser.json());
 
+// 🏠 Route racine (Page d'accueil)
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: "online",
+    project: "OxyONE / SSCI Cloud",
+    message: "Bienvenue sur le backend SSCI"
+  });
+});
+
 // ✅ GET route
 app.get("/helloWorld", (req, res) => {
-  res.status(200).send("✅ Backend SSCI en ligne sur Cloud Run !");
+  res.status(200).send("✅ Backend SSCI en ligne sur Cloud Run !\n");
 });
 
 // ✅ POST route
@@ -44,7 +53,7 @@ app.post("/addData", async (req, res) => {
   }
 });
 
-// ✅ Port Cloud Run
+// ✅ Port Render / Cloud Run
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`🚀 Backend SSCI écoutant sur le port ${PORT}`);
