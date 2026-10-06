@@ -18,3 +18,7 @@ Core API and Serverless infrastructure for the **Oxyone Cloud** ecosystem.
 
 ---
 *Certified by Startup Algeria* 🇩🇿
+
+
+## Déploiement GCP
+Projet géré sur Google Cloud Shell ().
