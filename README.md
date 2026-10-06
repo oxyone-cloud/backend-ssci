@@ -22,3 +22,7 @@ Core API and Serverless infrastructure for the **Oxyone Cloud** ecosystem.
 
 ## Déploiement GCP
 Projet géré sur Google Cloud Shell ().
+
+
+## Déploiement GCP
+Projet géré sur Google Cloud Shell ().
