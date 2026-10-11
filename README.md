@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="640" alt="OxyONE Cloud Ecosystem" src="https://github.com/user-attachments/assets/4cd6fb4d-4cd2-467b-9086-8e1bc0fd8f7f" />
+  <img width="640" alt="Oxyone Backend Engine" src="https://github.com/user-attachments/assets/4cd6fb4d-4cd2-467b-9086-8e1bc0fd8f7f" />
 </p>
 
 <p align="center">
@@ -10,51 +10,32 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
   <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud"/>
   <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" alt="Firebase"/>
-  <img src="https://img.shields.io/badge/Node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/Cloud-Architecture-orange?style=for-the-badge&logo=cloud&logoColor=white" alt="Cloud"/>
-  <img src="https://img.shields.io/badge/Logistics-IoT-informational?style=for-the-badge&logo=logistics&logoColor=white" alt="Logistique"/>
+  <img src="https://img.shields.io/badge/Cloud_Run-Ready-orange?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Cloud Run"/>
 </p>
 
-# 🚀 OxyONE / SSCI Cloud Ecosystem
+# Oxyone Backend Engine ⚙️
 
-Plateforme Cloud & IoT pour la gestion, la traçabilité et le suivi de la chaîne du froid en temps réel.
+Core API and Serverless infrastructure for the **Oxyone Cloud** ecosystem.
 
----
-
-## 🌐 Liens Principaux
-* **Portail Web (Production) :** [https://oxyone-portal-cb9aa.web.app/](https://oxyone-portal-cb9aa.web.app/)
-* **Dépôt Back-end :** [backend-ssci](https://github.com/oxyone-cloud/backend-ssci)
+| Runtime | Infrastructure | Database |
+| :---: | :---: | :---: |
+| **Node.js** | **Cloud Run / App Engine** | **Firestore / Realtime DB** |
 
 ---
 
-## 🏗️ Architecture Globale
+## 🛠 Responsibilities
+* 🛰️ **IoT Ingestion**: Processing telemetry data from Smart Tracking sensors.
+* 🔐 **Security**: Multi-tenant authentication and data isolation.
+* ⚡ **Real-time**: Thermal alert triggers and push notifications via FCM.
 
-```mermaid
-flowchart TD
-    subgraph FRONTEND ["📱 Front-End Applications (Flutter / Web)"]
-        A1["❄️ OxyONE App"]
-        A2["🧊 Cold Storage App"]
-        A3["📡 Smart Tracking System"]
-    end
+---
 
-    subgraph CLOUD_INFRA ["☁️ Google Cloud & Firebase Infrastructure"]
-        B1["🔥 Firebase Hosting\n(oxyone-portal-cb9aa.web.app)"]
-        B2["🔐 Firebase Auth"]
-        B3["📊 Cloud Firestore\n(Données Télémétriques IoT)"]
-        B4["⚡ Cloud Functions\n(Digital Sense Core)"]
-        B5["🐳 GCP Cloud Run\n(Backend SSCI APIs)"]
-    end
+## 🚀 Déploiement GCP
+Projet géré et administré via **Google Cloud Shell**.
 
-    subgraph IOT_SENSORS ["📟 Capteurs IoT & Chambres Froides"]
-        C1["🌡️ Capteurs Température/Humidité (BLE)"]
-    end
+---
 
-    C1 -->|Sync Bluetooth / Telemetry| A2
-    C1 -->|Sync Bluetooth / Telemetry| A3
-    A1 & A2 & A3 -->|HTTPS / gRPC| B1
-    A1 & A2 & A3 -->|Realtime Sync| B3
-    B1 --> B2
-    B3 --> B4
-    B4 --> B5
+*SSCI SOLUTION OF COLD © 2026 – v2026.1* 🇩🇿
